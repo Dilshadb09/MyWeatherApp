@@ -2,3 +2,7 @@ body {
   background: #f9f7fe;
   font-family: "Hind Siliguri", sans-serif;
 }
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+}
