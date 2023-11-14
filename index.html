@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link
       rel="stylesheet"
@@ -81,22 +81,23 @@
               Cape Town
             </h2>
             <h3 class="current-details mb-0" id="current-date">Sunday</h3>
+
             <div class="current-temperature">
               <p class="card-text2 mb-0 mt-0">
                 <i class="bi bi-cloudy"></i>
                 <span class="current-temperature-icon"></span
                 ><span
                   class="current-temperature-value"
-                  id="current-temperature"
-                  >24</span
+                  id="current-temperature-value"
+                ></span
                 ><span class="current-temperature-unit">°C</span>
               </p>
 
               <p class="current-details">
                 <span id="current-date"></span><br />
-                Moderate rain <br />
-                Humidity: <strong>87%</strong><br />Wind:
-                <strong>7.2km/h</strong>
+                <span id="condition">Moderate rain</span> <br />
+                Humidity: <strong id="humidity">87%</strong><br />Wind:
+                <strong id="wind">7.2km/h</strong>
               </p>
             </div>
           </div>
