@@ -40,10 +40,18 @@ button .bi {
   font-size: 27px;
   font-weight: bolder;
 }
+weekly-forecast {
+  display: flex;
+  justify-content: flex-start;
+  display: inline-block;
+  width: 40%;
+}
 
 .current-weather {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  display: inline-block;
+  width: 60%;
 }
 .weather-app {
   background: white;
@@ -51,7 +59,7 @@ button .bi {
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
 }
 
 header {
@@ -67,43 +75,64 @@ header {
 .bi {
   color: whitesmoke;
   font-size: 50px;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
 }
 .weekTemp {
   font-size: 20px;
   vertical-align: middle;
   color: whitesmoke;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
 }
 .weekDay {
   font-size: 25px;
   font-weight: bold;
   vertical-align: middle;
   color: whitesmoke;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
 }
-card {
+main-weather {
   background-color: transparent;
   border: none;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+}
+.card-text2 {
+  color: #481677;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
+  font-size: 55px;
+  font-weight: bold;
+  text-align: center;
+}
+.current-temperature-unit {
+  font-size: 36px;
+}
+p {
+  color: #481677;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
+  font-size: 25px;
+  font-weight: 300;
   text-align: center;
 }
 h3 {
   color: whitesmoke;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
   font-size: 35px;
   font-weight: bold;
+  text-align: center;
 }
 h2 {
-  color: #76a2e5;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  color: #481677;
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
   font-size: 45px;
   font-weight: bold;
+  text-align: center;
 }
 footer {
   border-top: 1px solid #f9f7fe;
   padding-top: 20px;
   color: whitesmoke;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.37);
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.78);
   font-size: 16px;
   font-weight: 400;
 }
