@@ -1,9 +1,26 @@
 function displayTemperature(response) {
+  // temperature
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
+  // city
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
+  //humidity
+  let humidityElement = document.querySelector("#humidity");
+  let humidity = response.data.humidity.current;
+  //wind speed
+  let windspeedElement = document.querySelector("#wind-speed");
+  let windSpeed = response.data.windSpeed.current;
+  // condition
+  let conditionElement = document.querySelector("#condition");
+  let condition = response.data.condition.current;
+
+  //print to HTML
+
   temperatureElement.innerHTML = temperature;
+  humidityElement.innerHTML = humidity;
+  windspeedElement.innerHTML = wind;
+  conditionElement.innerHTML = condition;
 }
 
 function search(event) {
@@ -15,5 +32,38 @@ function search(event) {
 
   axios.get(apiUrl).then(displayTemperature);
 }
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let day = date.getDay();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let formattedDay = days[day];
+  return `${formattedDay} ${hours}:${minutes}`;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+let currentDateELement = document.querySelector("#current-date");
+let currentDate = new Date();
+
+currentDateELement.innerHTML = formatDate(currentDate);
