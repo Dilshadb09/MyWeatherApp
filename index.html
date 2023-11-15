@@ -19,87 +19,33 @@
     <title>My Weather App</title>
   </head>
   <body>
-    <h1>Welcome to My Weather</h1>
-    <div class="search-container">
+    <!--Main Forecast-->
+    <div class="weather-app">
       <header>
-        <form id="search-form">
+        <form>
           <input
+            class="search"
             type="search"
-            placeholder="Enter a city.."
+            placeholder="Enter City..."
             required
-            class="search-input"
-            id="search-input"
           />
-          <input type="submit" value="Search" class="search-button" />
+          <input class="search-button" type="submit" value="Search" />
         </form>
       </header>
       <main>
-        <!--Weekly Forecast-->
-        <div class="container">
-          <div class="weekly-forecast">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloudy align-middle"></i>
-                <span class="weekTemp align-middle">18&deg; 11&deg;</span>
-                <span class="weekDay align-middle">Mon</span>
-              </li>
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloud-rain-heavy align-middle"></i>
-                <span class="weekTemp align-middle">16&deg; 11&deg;</span>
-                <span class="weekDay align-middle">Tues</span>
-              </li>
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloud-rain align-middle"></i>
-                <span class="weekTemp align-middle">16&deg; 12&deg;</span>
-                <span class="weekDay align-middle">Wed</span>
-              </li>
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloud-drizzle align-middle"></i>
-                <span class="weekTemp align-middle">15&deg; 12&deg;</span>
-                <span class="weekDay align-middle">Thurs</span>
-              </li>
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloud-sun align-middle"></i>
-                <span class="weekTemp align-middle">16&deg; 10&deg;</span>
-                <span class="weekDay align-middle">Fri</span>
-              </li>
-              <li class="list-group-item mb-0">
-                <i class="bi bi-cloud-sun align-middle"></i>
-                <span class="weekTemp align-middle">16&deg; 10&deg;</span>
-                <span class="weekDay align-middle">Sat</span>
-              </li>
-            </ul>
+        <!-- Main Forecast -->
+        <div class="main-forecast">
+          <div>
+            <h1 class="current-city">Cape Town</h1>
+            <p class="current-city-temp-details">
+              Sunday 15:32, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
           </div>
-
-          <!--Main Forecast-->
-
-          <div class="current-weather">
-            <h2
-              class="current-city mb-0 text-center text-cornflowerblue"
-              id="current-city"
-            >
-              Cape Town
-            </h2>
-            <h3 class="current-details mb-0" id="current-date">Sunday</h3>
-
-            <div class="current-temperature">
-              <p class="card-text2 mb-0 mt-0">
-                <i class="bi bi-cloudy"></i>
-                <span class="current-temperature-icon"></span
-                ><span
-                  class="current-temperature-value"
-                  id="current-temperature-value"
-                ></span
-                ><span class="current-temperature-unit">°C</span>
-              </p>
-
-              <p class="current-details">
-                <span id="current-date"></span><br />
-                <span id="condition">Moderate rain</span> <br />
-                Humidity: <strong id="humidity">87%</strong><br />Wind:
-                <strong id="wind">7.2km/h</strong>
-              </p>
-            </div>
+          <div class="current-temp">
+            <span class="current-temp-emoji">🌥 </span>
+            <span class="current-temp-value">14</span
+            ><span class="current-temp-unit">&#8451;</span>
           </div>
         </div>
       </main>
