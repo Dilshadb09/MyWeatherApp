@@ -7,20 +7,25 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.city;
   //humidity
   let humidityElement = document.querySelector("#humidity");
-  let humidity = response.data.humidity.current;
+  let humidity = response.data.temperature.humidity;
   //wind speed
   let windspeedElement = document.querySelector("#wind-speed");
-  let windSpeed = response.data.windSpeed.current;
+  let windSpeed = response.data.wind.speed;
   // condition
   let conditionElement = document.querySelector("#condition");
-  let condition = response.data.condition.current;
+  let condition = response.data.condition.description;
+
+  // icon_url
+  let weatherIconElement = document.querySelector("#weather-icon");
+  let weatherIcon = response.data.condition.icon_url;
 
   //print to HTML
 
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
-  windspeedElement.innerHTML = wind;
+  windspeedElement.innerHTML = windSpeed;
   conditionElement.innerHTML = condition;
+  weatherIconElement.innerHTML = weatherIcon;
 }
 
 function search(event) {
@@ -31,6 +36,7 @@ function search(event) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTemperature);
+  displayTemperature(city);
 }
 
 function formatDate(date) {
