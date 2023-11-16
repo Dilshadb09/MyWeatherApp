@@ -14,18 +14,15 @@ function displayTemperature(response) {
   // condition
   let conditionElement = document.querySelector("#condition");
   let condition = response.data.condition.description;
-
-  // icon_url
+  //weather icon
   let weatherIconElement = document.querySelector("#weather-icon");
-  let weatherIcon = response.data.condition.icon_url;
-
+  let weatherIcon = response.data.condition.icon;
   //print to HTML
-
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
   windspeedElement.innerHTML = windSpeed;
   conditionElement.innerHTML = condition;
-  weatherIconElement.innerHTML = weatherIcon;
+  weatherIconElement = weatherIcon;
 }
 
 function search(event) {
