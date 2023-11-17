@@ -16,7 +16,7 @@ function displayTemperature(response) {
   let condition = response.data.condition.description;
   //weather icon
   let weatherIconElement = document.querySelector("#icon");
-  let weatherIcon = response.data.condition.icon;
+  let weatherIcon = response.data.condition.icon_url;
   //print to HTML
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
