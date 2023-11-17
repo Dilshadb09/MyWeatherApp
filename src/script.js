@@ -17,12 +17,13 @@ function displayTemperature(response) {
   //weather icon
   let weatherIconElement = document.querySelector("#icon");
   let weatherIcon = response.data.condition.icon_url;
+
   //print to HTML
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
   windspeedElement.innerHTML = windSpeed;
   conditionElement.innerHTML = condition;
-  weatherIconElement = weatherIcon;
+  weatherIconElement.src = weatherIcon;
 }
 
 function search(event) {
