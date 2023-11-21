@@ -89,4 +89,3 @@ function getForecast(city) {
 }
 
 searchCity("Cape Town");
-displayForecast();
