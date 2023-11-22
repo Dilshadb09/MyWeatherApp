@@ -17,25 +17,20 @@ function displayTemperature(response) {
   //weather icon
   let weatherIconElement = document.querySelector("#icon");
   let weatherIcon = response.data.condition.icon_url;
-
   //print to HTML
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
   windspeedElement.innerHTML = windSpeed;
   conditionElement.innerHTML = condition;
   weatherIconElement.src = weatherIcon;
-
   getForecast(response.data.city);
 }
-
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
-
   let city = searchInputElement.value;
   let apiKey = "955a5bb061o7c49atc55346dc6fff582";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
   axios.get(apiUrl).then(displayTemperature);
   displayTemperature(city);
 }
@@ -75,17 +70,10 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[date.getDay()];
-}
-
-function getForecast(city) {
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(displayForecast);
-}
-
-searchCity("Cape Town");
+window.addEventListener("load", function () {
+  let city = "Cape Town";
+  let apiKey = "955a5bb061o7c49atc55346dc6fff582";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+  displayTemperature(city);
+});
