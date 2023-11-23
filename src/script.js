@@ -25,6 +25,8 @@ function displayTemperature(response) {
   //weather icon
   let weatherIconElement = document.querySelector("#icon");
   let weatherIcon = response.data.condition.icon_url;
+
+  let date = new Date(response.data.time * 1000);
   //print to HTML
   temperatureElement.innerHTML = temperature;
   humidityElement.innerHTML = humidity;
@@ -96,6 +98,8 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
+      let nextDay = new Date();
+      nextDay.setDate(nextDay.getDate() + index + 1);
       forecastHtml =
         forecastHtml +
         `
@@ -105,7 +109,6 @@ function displayForecast(response) {
               <img
                 src="${day.condition.icon_url}"
                 alt=""
-              
                 class="weather-forecast-icon"
               />
               <div class="weather-forecast-temperature">
