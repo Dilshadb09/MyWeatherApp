@@ -82,7 +82,7 @@ p {
 .current-temp-emoji {
   font-size: 40px;
   position: relative;
-  top: -15px;
+  bottom: 20px;
   margin-right: 5px;
 }
 .current-temp-value {
@@ -115,6 +115,7 @@ p {
   -moz-box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .weather-forecast-date {

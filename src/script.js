@@ -94,15 +94,13 @@ function getForecast(city) {
   axios(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
-  let forecastHtml = "";
+  let forecastHtml = `<div class"row">`;
 
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if (index >= 1 && index < 6) {
       let nextDay = new Date();
-      nextDay.setDate(nextDay.getDate() + index + 1);
-      forecastHtml =
-        forecastHtml +
-        `
+
+      forecastHtml += `
  <div class="row">
             <div class="col-2">
               <div class="weather-forecast-date">${formatDay(day.time)}</div>
