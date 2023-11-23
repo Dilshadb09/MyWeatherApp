@@ -105,10 +105,16 @@ p {
   padding-bottom: 10px;
   margin-top: 15px;
   margin-bottom: 10px;
+}
+.col-2 {
+  margin-bottom: 5px;
   border: 1px solid whitesmoke;
+  border-radius: 10px;
   box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
   -webkit-box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
   -moz-box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .weather-forecast-date {
