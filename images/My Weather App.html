@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    
+    <script src="./My Weather App_files/axios.min.js"></script>
+    
+    
+    <title>My Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="./My Weather App_files/css2" rel="stylesheet"><link rel="stylesheet" href="./My Weather App_files/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous"><link rel="stylesheet" href="./My Weather App_files/style.css"><link rel="stylesheet" href="./My Weather App_files/bootstrap-icons(1).css"></head>
+  <body cz-shortcut-listen="true">
+    <!--Main Forecast-->
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input class="search" type="search" placeholder="Enter City..." required="" id="search-input">
+          <input class="search-button" type="submit" value="Search">
+        </form>
+      </header>
+      <main>
+        <!-- Main Forecast -->
+        <div class="main-forecast">
+          <div>
+            <h1 class="current-city" id="current-city">Cape Town</h1>
+            <p class="current-city-temp-details">
+              <span id="current-date">Thursday 09:07</span>, <span id="condition">broken clouds</span>
+              <br>
+              Humidity: <strong id="humidity">79</strong>, Wind:
+              <strong id="wind-speed">2.68</strong>
+            </p>
+          </div>
+          <div class="current-temp">
+            <span class="weather-icon" id="weather-icon"><img id="icon" src="./My Weather App_files/broken-clouds-day.png">
+            </span>
+            <span class="current-temp-value" id="current-temperature">21</span><span class="current-temp-unit">℃</span>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-forecast-date">Thu</div>
+              <img src="./My Weather App_files/50d@2x.png" alt="" width="36" class="weather-forecast-icon">
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">18°</span>
+                <span class="weather-forecast-temperature-min">12°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Dilshadb09" target="_blank">Dilshad Omar</a>
+        and is
+        <a href="https://github.com/Dilshadb09/MyWeatherApp" target="_blank">hosted on GitHub</a>
+        and
+        <a href="https://yourweather2709.netlify.app/" target="_blank">hosted on Netlify</a>
+      </footer>
+    </div>
+    <script src="./My Weather App_files/script.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
