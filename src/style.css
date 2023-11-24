@@ -28,7 +28,7 @@ header {
   background-color: whitesmoke;
   border: none;
   font-size: 16px;
-  padding: 20px;
+  padding: 16px;
   width: 80%;
   border-radius: 7px;
   box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
@@ -70,7 +70,8 @@ main {
   color: rgb(248, 245, 245);
   font-size: 20px;
   font-weight: 500;
-  line-height: 25px;
+
+  line-height: 24px;
 }
 
 strong {
@@ -79,11 +80,11 @@ strong {
 p {
   font-size: 20px;
 }
-.current-temp-emoji {
-  font-size: 40px;
+.icon {
+  width: 88px;
+  height: 88px;
   position: relative;
-  bottom: 20px;
-  margin-right: 5px;
+  top: -34px;
 }
 .current-temp-value {
   font-size: 80px;
@@ -101,10 +102,10 @@ p {
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 30px;
 }
 .col-2 {
+  width: 95px;
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;
@@ -115,13 +116,12 @@ p {
   -moz-box-shadow: 2px 4px 5px 0px rgba(110, 105, 105, 0.75);
   padding-top: 10px;
   padding-bottom: 10px;
-  text-align: center;
 }
 
 .weather-forecast-date {
   text-align: center;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   margin-bottom: 10px;
 }
@@ -131,7 +131,10 @@ p {
   height: 88px;
   display: block;
   margin: 0 auto;
+  position: relative;
+  left: -10px;
 }
+
 .weather-forecast-temperature {
   text-align: center;
   color: whitesmoke;

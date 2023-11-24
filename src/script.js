@@ -104,7 +104,7 @@ function displayForecast(response) {
  <div class="row">
             <div class="col-2">
               <div class="weather-forecast-date">${formatDay(day.time)}</div>
-              <img
+              <img 
                 src="${day.condition.icon_url}"
                 alt=""
                 class="weather-forecast-icon"
@@ -121,8 +121,9 @@ function displayForecast(response) {
               `;
     }
   });
-
+  forecastHtml = forecastHtml + "</div>";
   let forecastElement = document.querySelector("#forecast");
+
   forecastElement.innerHTML = forecastHtml;
 }
 
